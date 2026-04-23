@@ -1,0 +1,25 @@
+date,description,amount,category
+2024-01-05,Grocery Store,1200,Food
+2024-01-08,Uber Ride,350,Transport
+2024-01-10,Movie Tickets,800,Entertainment
+2024-01-15,Electricity Bill,2200,Utilities
+2024-01-20,Amazon Shopping,4500,Shopping
+2024-01-25,Pharmacy,600,Health
+2024-02-02,Restaurant,1500,Food
+2024-02-05,Metro Card,500,Transport
+2024-02-10,Concert Tickets,3000,Entertainment
+2024-02-14,Water Bill,800,Utilities
+2024-02-18,Clothing Store,6500,Shopping
+2024-02-22,Doctor Visit,2500,Health
+2024-03-01,Supermarket,2000,Food
+2024-03-06,Petrol,1200,Transport
+2024-03-12,Netflix,649,Entertainment
+2024-03-15,Internet Bill,1500,Utilities
+2024-03-20,Electronics,8000,Shopping
+2024-03-25,Gym Membership,1800,Health
+2024-04-03,Grocery Store,1800,Food
+2024-04-07,Cab Ride,420,Transport
+2024-04-11,Sports Event,2200,Entertainment
+2024-04-16,Gas Bill,950,Utilities
+2024-04-19,Furniture,12000,Shopping
+2024-04-24,Hospital Bill,7500,Health
