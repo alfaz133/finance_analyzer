@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Personal Finance Analyzer</h1>
+
+    <!-- Upload Section -->
+    <div class="upload-box" id="uploadBox">
+        <p>Upload your CSV file</p>
+        <input type="file" id="csvFile" accept=".csv">
+        <button id="uploadBtn" onclick="uploadFile()">Analyse</button>
+        <p id="uploadStatus"></p>
+    </div>
+
+    <!-- Dashboard (hidden until upload) -->
+    <div id="dashboard" class="hidden">
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <h3>Total Spent</h3>
+                <p id="totalSpent"></p>
+            </div>
+            <div class="stat-card">
+                <h3>Avg Transaction</h3>
+                <p id="avgTransaction"></p>
+            </div>
+            <div class="stat-card">
+                <h3>Anomaly Threshold</h3>
+                <p id="anomalyThreshold"></p>
+            </div>
+            <div class="stat-card">
+                <h3>Anomalies Found</h3>
+                <p id="anomalyCount"></p>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-row">
+            <div class="chart-box">
+                <h2>Spending by Category</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h2>Monthly Spending</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <label>Filter by Category:
+                <select id="categoryFilter" onchange="filterTable()">
+                    <option value="all">All</option>
+                </select>
+            </label>
+            <label>Filter by Month:
+                <select id="monthFilter" onchange="filterTable()">
+                    <option value="all">All</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="table-box">
+            <h2>Transactions</h2>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount (₹)</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
