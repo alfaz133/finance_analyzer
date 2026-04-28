@@ -11,6 +11,7 @@ CORS(app)
 
 UPLOAD_FOLDER = "uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # ------------------ DATABASE SETUP ------------------
 
@@ -192,3 +193,4 @@ def upload():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
+    
