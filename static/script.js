@@ -9,10 +9,12 @@ async function uploadFile() {
 
     if (!fileInput.files[0]) {
         status.textContent = "Please select a CSV file first.";
+        status.style.color = "#ffffff";
         return;
     }
 
     status.textContent = "Analysing...";
+    status.style.color = "#ffffff";
 
     const formData = new FormData();
     formData.append("file", fileInput.files[0]);
@@ -27,6 +29,7 @@ async function uploadFile() {
 
         if (data.error) {
             status.textContent = "Error: " + data.error;
+            status.style.color = "#ffffff";
             return;
         }
 
@@ -36,6 +39,7 @@ async function uploadFile() {
 
     } catch (error) {
         status.textContent = "Failed to connect to server.";
+        status.style.color = "#ffffff";
         console.error(error);
     }
 }
