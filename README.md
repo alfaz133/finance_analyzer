@@ -12,3 +12,14 @@ A Flask-based web application for analyzing financial transactions and visualizi
 - Flask
 - Pandas
 - Matplotlib
+
+## Screenshots
+
+### Upload Page
+![Upload Page](screenshots/upload.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Anomaly Detection
+![Anomaly Table](screenshots/anomaly.png)
